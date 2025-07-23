@@ -383,7 +383,7 @@ const ArtworkDataTable: React.FC = () => {
               }}
               label="Clear All"
               size="small"
-              className="w-full bg-red-600 hover:border-black border-black hover:bg-red-500 text-white mb-2 "
+              className="w-full  bg-red-600 hover:border-black border-black hover:bg-red-500 text-white mb-2 "
             />
             
             <Button 
@@ -393,7 +393,7 @@ const ArtworkDataTable: React.FC = () => {
               }}
               label="Done"
               size="small"
-              className="w-full bg-blue-500 text-white mb-2 hover:border-black border-black hover:bg-blue-400"
+              className="w-full  bg-blue-500 text-white mb-2 hover:border-black border-black hover:bg-blue-400"
             />
           </div>
         </OverlayPanel>
