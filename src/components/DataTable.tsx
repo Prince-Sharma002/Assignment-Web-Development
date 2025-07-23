@@ -5,7 +5,6 @@ import { Paginator } from 'primereact/paginator';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Button } from 'primereact/button';
 import { InputNumber } from 'primereact/inputnumber';
-import { Checkbox } from 'primereact/checkbox';
 import "../styles/custom-paginator.css"; 
 import logo from "../assets/logo.png"
 
@@ -19,17 +18,6 @@ interface Artwork {
   date_end: number;
 }
 
-interface ApiResponse {
-  pagination: {
-    total: number;
-    limit: number;
-    offset: number;
-    total_pages: number;
-    current_page: number;
-    next_url: string | null;
-  };
-  data: Artwork[];
-}
 
 const ArtworkDataTable: React.FC = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
@@ -38,7 +26,6 @@ const ArtworkDataTable: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedArtworks, setSelectedArtworks] = useState<Artwork[]>([]);
   const [globalSelectedIds, setGlobalSelectedIds] = useState<Set<number>>(new Set());
-  const [allArtworks, setAllArtworks] = useState<Artwork[]>([]);
   const [selectRowsCount, setSelectRowsCount] = useState<number>(0);
   const overlayRef = useRef<OverlayPanel>(null);
   const rows = 12;
@@ -110,15 +97,6 @@ const ArtworkDataTable: React.FC = () => {
     }
     
     setGlobalSelectedIds(newSelectedIds);
-    setAllArtworks(prev => {
-      const newAll = [...prev];
-      selectedArtworksList.forEach(artwork => {
-        if (!newAll.find(a => a.id === artwork.id)) {
-          newAll.push(artwork);
-        }
-      });
-      return newAll;
-    });
     
     setLoading(false);
   };
@@ -143,15 +121,6 @@ const ArtworkDataTable: React.FC = () => {
     );
   };
 
-  const renderDateRange = (artwork: Artwork) => {
-    if (artwork.date_start && artwork.date_end) {
-      if (artwork.date_start === artwork.date_end) {
-        return <span>{artwork.date_start}</span>;
-      }
-      return <span>{artwork.date_start} - {artwork.date_end}</span>;
-    }
-    return <span className="text-gray-400">Unknown</span>;
-  };
 
   const onSelectionChange = (e: any) => {
     const selected = e.value || [];
@@ -169,9 +138,6 @@ const ArtworkDataTable: React.FC = () => {
     setSelectedArtworks(selected);
   };
 
-  const isRowSelectable = (data: Artwork) => {
-    return true; 
-  };
 
   const onRowSelect = (e: any) => {
     const artwork = e.data;
