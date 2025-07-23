@@ -1,0 +1,130 @@
+.custom-paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.custom-paginator .p-paginator-pages {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 6px;
+}
+
+.custom-paginator .p-paginator-page {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 !important;
+}
+
+.custom-paginator .p-paginator-page:hover {
+  background: #ff8555;
+  color: white;
+  border-color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.custom-paginator .p-paginator-page.p-highlight {
+  background: #ff8555;
+  color: white;
+  border-color: #000000;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+.custom-paginator .p-paginator-page.p-highlight:hover {
+  background: #ff8555;
+  border-color: #f14f0f;
+}
+
+.custom-paginator .p-paginator-first,
+.custom-paginator .p-paginator-prev,
+.custom-paginator .p-paginator-next,
+.custom-paginator .p-paginator-last {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.custom-paginator .p-paginator-first:hover,
+.custom-paginator .p-paginator-prev:hover,
+.custom-paginator .p-paginator-next:hover,
+.custom-paginator .p-paginator-last:hover {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.custom-paginator .p-paginator-first.p-disabled,
+.custom-paginator .p-paginator-prev.p-disabled,
+.custom-paginator .p-paginator-next.p-disabled,
+.custom-paginator .p-paginator-last.p-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.custom-paginator .p-paginator-first.p-disabled:hover,
+.custom-paginator .p-paginator-prev.p-disabled:hover,
+.custom-paginator .p-paginator-next.p-disabled:hover,
+.custom-paginator .p-paginator-last.p-disabled:hover {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border-color: #d1d5db;
+  box-shadow: none;
+  transform: none;
+}
+
+.p-checkbox-box {
+  background: #f3f4f6 !important;
+  border: 2px solid #414141 !important;
+  border-radius: 4px !important;
+  transition: box-shadow 0.2s;
+}
+
+.p-checkbox-box.p-highlight {
+  background: #50fce5 !important;
+  border-color: #000000 !important;
+}
+
+.p-checkbox-box .p-checkbox-icon {
+  color: #000 !important;
+  font-size: 18px !important;
+}
+
+.p-checkbox-box.p-highlight .p-checkbox-icon {
+  color: #fff !important;
+}
+
+.p-checkbox-box:hover, .p-checkbox-box:focus {
+  box-shadow: 0 0 0 2px #ff8555;
+}

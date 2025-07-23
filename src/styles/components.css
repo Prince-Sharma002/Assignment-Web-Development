@@ -1,0 +1,121 @@
+.p-datatable .p-checkbox {
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-datatable .p-checkbox .p-checkbox-box {
+  border: 3px solid #374151 !important;
+  background: rgb(5, 5, 5) !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.p-datatable .p-checkbox .p-checkbox-box:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.p-datatable .p-checkbox .p-checkbox-box.p-highlight {
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+}
+
+.p-datatable .p-checkbox .p-checkbox-box .p-checkbox-icon {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.p-datatable .p-selection-column {
+  text-align: center !important;
+  width: 50px !important;
+  min-width: 50px !important;
+  max-width: 50px !important;
+  padding: 8px !important;
+  background: #f9fafb !important;
+}
+
+.p-datatable .p-datatable-thead .p-selection-column {
+  padding: 12px !important;
+  background: #f3f4f6 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+.p-datatable .p-datatable-tbody .p-selection-column {
+  padding: 8px !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+.p-datatable {
+  background-color: #f3f4f6 !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background-color: #f9fafb !important;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #e5e7eb !important;
+}
+
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background-color: #dbeafe !important;
+}
+
+.p-datatable .p-datatable-tbody > tr.p-highlight:hover {
+  background-color: #bfdbfe !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #e5e7eb !important;
+}
+
+.p-datatable .p-datatable-thead .p-checkbox .p-checkbox-box {
+  background: white !important;
+  border: 3px solid #374151 !important;
+}
+
+.p-datatable .p-datatable-thead .p-checkbox .p-checkbox-box.p-highlight {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.p-checkbox {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.p-checkbox-box {
+  border: 2px solid #374151 !important;
+  background: white !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.p-checkbox-box.p-focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.p-datatable-selectable-row .p-checkbox,
+.p-datatable-header-checkbox .p-checkbox {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
